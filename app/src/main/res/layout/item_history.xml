@@ -78,7 +78,7 @@
             android:layout_alignParentEnd="true"
             android:layout_marginTop="15dp"
             android:layout_marginEnd="61dp"
-            android:text="Сумма"
+            android:text="Сумма :"
             android:textColor="@color/purple_700"
             android:textSize="14sp"
             tools:ignore="HardcodedText,MissingConstraints"

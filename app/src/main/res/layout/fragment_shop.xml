@@ -30,13 +30,14 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_bias="0.077"
-            tools:ignore="MissingConstraints" />
+            tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
         <TextView
             android:id="@+id/txt"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:paddingTop="20dp"
+            android:layout_marginTop="20dp"
+            android:paddingTop="10dp"
             android:text="Корзина"
             android:textAlignment="center"
             android:textSize="24sp"
@@ -104,7 +105,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 tools:itemCount="1"
-                tools:listitem="@layout/item_product" />
+                tools:listitem="@layout/item_shop" />
         </ScrollView>
 
         <Button
