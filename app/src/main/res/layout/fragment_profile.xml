@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,141 +8,206 @@
     tools:context=".ui.ProfileFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/constraintLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toTopOf="parent">
 
-        <Button
-            android:id="@+id/back_to_menu"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            tools:layout_editor_absoluteX="25dp"
-            tools:layout_editor_absoluteY="52dp"
-            android:background="@drawable/back_to_menu"/>
 
         <ImageView
-            android:layout_width="484dp"
-            android:layout_height="360dp"
-            android:layout_marginTop="-25dp"
+            android:id="@+id/imageView4"
+            android:layout_width="440dp"
+            android:layout_height="330dp"
+            android:layout_marginTop="-30dp"
             android:src="@drawable/backprofiletop"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.0"
-            android:contentDescription="TODO" />
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/backToMenu"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_alignBottom="@+id/imageView3"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/back_to_menu"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/imageView3"
+            app:layout_constraintHorizontal_bias="0.126"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.194"
+            tools:ignore="MissingConstraints" />
 
         <ImageView
+            android:id="@+id/imageView3"
             android:layout_width="140dp"
             android:layout_height="140dp"
-            android:layout_marginTop="96dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="-70dp"
             android:background="@drawable/profileimage"
             android:src="@drawable/alisa"
+            app:layout_constraintBottom_toTopOf="@+id/textView2"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.498"
+            app:layout_constraintHorizontal_bias="0.395"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0" />
 
         <TextView
+            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="174dp"
+            android:layout_marginBottom="20dp"
             android:text="Alisa"
             android:textColor="@color/white"
             android:textSize="24sp"
+            app:layout_constraintBottom_toBottomOf="@+id/imageView4"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.972"
             app:layout_constraintStart_toStartOf="parent"
-            tools:layout_editor_absoluteY="252dp" />
+            app:layout_constraintTop_toBottomOf="@+id/imageView3" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
         android:layout_width="match_parent"
-        android:layout_height="540dp"
-        android:layout_marginTop="272dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="260dp"
+        android:layout_marginBottom="7dp"
         android:background="@drawable/backeprofi"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
         <TextView
             android:id="@+id/title_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
             android:layout_marginTop="16dp"
+            android:layout_marginEnd="237dp"
+            android:layout_marginBottom="82dp"
             android:text="Личный кабинет"
             android:textColor="@color/black"
             android:textSize="22sp"
             android:textStyle="bold"
-            app:layout_constraintTop_toTopOf="parent"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="26dp" />
+            app:layout_constraintBottom_toTopOf="@+id/imageView5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
 
         <ImageView
+            android:id="@+id/imageView5"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="82dp"
+            android:layout_marginEnd="335dp"
             android:src="@drawable/cash"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="127dp" />
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title_profile"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/bonus_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:layout_marginBottom="45dp"
             android:text="Бонусы"
             android:textColor="@color/black"
             android:textSize="20sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="184dp" />
+            app:layout_constraintBottom_toTopOf="@+id/imageView6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.076"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView5"
+            app:layout_constraintVertical_bias="0.0"
+            tools:ignore="MissingConstraints" />
 
         <ImageView
+            android:id="@+id/imageView6"
             android:layout_width="50dp"
             android:layout_height="50dp"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="335dp"
             android:src="@drawable/debt"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="256dp" />
+            app:layout_constraintBottom_toTopOf="@+id/debt_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bonus_title"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/debt_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Задолженность"
+            android:layout_marginStart="26dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginEnd="236dp"
+            android:layout_marginBottom="154dp"
+            android:text="Задолжность"
             android:textColor="@color/black"
             android:textSize="20sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="26dp"
-            tools:layout_editor_absoluteY="325dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView6"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/debt_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="350dp"
+            android:layout_marginEnd="141dp"
+            android:layout_marginBottom="154dp"
             android:text="1533c"
             android:textColor="@color/red"
             android:textSize="20sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="228dp"
-            tools:layout_editor_absoluteY="325dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/debt_title"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="MissingConstraints" />
 
         <TextView
             android:id="@+id/bonus_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginEnd="230dp"
             android:text="303c"
             android:textColor="@color/green"
             android:textSize="20sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="228dp"
-            tools:layout_editor_absoluteY="184dp" />
+            app:layout_constraintBottom_toTopOf="@+id/debt_title"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toEndOf="@+id/bonus_title"
+            app:layout_constraintTop_toBottomOf="@+id/title_profile"
+            app:layout_constraintVertical_bias="0.464" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

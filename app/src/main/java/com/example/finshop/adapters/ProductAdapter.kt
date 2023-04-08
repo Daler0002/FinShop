@@ -6,34 +6,37 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.example.finshop.databinding.ItemProductBinding
+import com.example.finshop.models.History
 import com.example.finshop.models.Product
 
 class ProductAdapter : ListAdapter<Product, ProductAdapter.ProductViewHolder>(ProductDiffCallback()) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ProductViewHolder {
-        val binding = ItemProductBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        val inflater = LayoutInflater.from(parent.context)
+        val binding = ItemProductBinding.inflate(inflater, parent, false)
         return ProductViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: ProductViewHolder, position: Int) {
-        val product = getItem(position)
-        holder.bind(product)
+        holder.bind(getItem(position))
     }
+    inner class ProductViewHolder(private val binding: ItemProductBinding) : RecyclerView.ViewHolder(binding.root) {
 
-    class ProductViewHolder(private val binding: ItemProductBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(product: Product) {
             binding.itemName.text = product.name
             binding.itemPrice.text = product.price.toString()
+            binding.itemImage.setImageResource(product.image.toInt())
         }
     }
 
     class ProductDiffCallback : DiffUtil.ItemCallback<Product>() {
+
         override fun areItemsTheSame(oldItem: Product, newItem: Product): Boolean {
             return oldItem == newItem
         }
 
         override fun areContentsTheSame(oldItem: Product, newItem: Product): Boolean {
-            return oldItem == newItem
+            return oldItem.name == newItem.name && oldItem.price == newItem.price && oldItem.image == newItem.image
         }
     }
 }

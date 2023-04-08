@@ -37,25 +37,37 @@
             android:id="@+id/news_title2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="41dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="54dp"
+            android:layout_marginBottom="36dp"
             android:text="Air Max 2023"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="18sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="211dp"
-            tools:layout_editor_absoluteY="63dp" />
+            app:layout_constraintBottom_toTopOf="@+id/news_price"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/news_item_image"
+            app:layout_constraintTop_toBottomOf="@+id/news_title"
+            tools:ignore="MissingConstraints" />
 
         <TextView
-            android:id="@+id/news_title3"
+            android:id="@+id/news_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginStart="97dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="55dp"
+            android:layout_marginBottom="48dp"
             android:text="550c"
             android:textAlignment="center"
             android:textColor="@color/white"
             android:textSize="22sp"
-            tools:ignore="MissingConstraints"
-            tools:layout_editor_absoluteX="267dp"
-            tools:layout_editor_absoluteY="123dp" />
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/news_item_image"
+            app:layout_constraintTop_toBottomOf="@+id/news_title2"
+            tools:ignore="MissingConstraints" />
 
         <ImageView
             android:id="@+id/news_item_image"
