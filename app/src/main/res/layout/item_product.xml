@@ -5,7 +5,7 @@
     android:layout_height="320dp"
     android:layout_width="190dp"
     android:layout_marginTop="10dp"
-    android:layout_marginLeft="6dp">
+    android:layout_marginStart="6dp">
 
     <androidx.cardview.widget.CardView
         android:id="@+id/item_card"
@@ -75,21 +75,23 @@
                     android:textSize="8sp"
                     android:textStyle="bold"
                     android:visibility="visible"
-                    tools:ignore="TouchTargetSizeCheck"
+                    tools:ignore="RtlHardcoded,SmallSp,TouchTargetSizeCheck"
                     tools:text="-"
                     tools:visibility="visible" />
 
                 <EditText
-                    android:id="@id/item_amount"
+                    android:id="@+id/item_amount_prod"
                     android:layout_width="45dp"
                     android:layout_height="35dp"
+                    android:autofillHints="1"
                     android:background="@color/cardview_light_background"
                     android:hint="1"
+                    android:importantForAutofill="no"
                     android:inputType="number"
                     android:textAlignment="center"
                     android:textSize="12sp"
                     android:textStyle="bold"
-                    tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+                    tools:ignore="HardcodedText,TouchTargetSizeCheck" />
 
                 <Button
                     android:id="@+id/btn_plus"

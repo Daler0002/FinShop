@@ -24,9 +24,9 @@ class ShopAdapter : ListAdapter<Product, ShopAdapter.ProductViewHolder>(ProductD
     inner class ProductViewHolder(private val binding: ItemShopBinding) : RecyclerView.ViewHolder(binding.root) {
 
         fun bind(product: Product) {
-            binding.itemName.text = product.name
-            binding.itemPrice.text = product.price.toString()
-            binding.itemImage.setImageResource(product.image.toInt())
+            binding.itemName2.text = product.name
+            binding.itemPrice2.text = product.price.toString()
+            binding.itemImage2.setImageResource(product.image.toInt())
         }
     }
 
